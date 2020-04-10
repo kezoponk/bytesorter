@@ -20,6 +20,7 @@ If (( byteVar & 0b1000 ) == 0b1000 ) {}
 ```
 <br>
 ### Output of bytesorter:
+
 ```java
 If (( byteVar & 0b0001 ) == 0b0001 ) {}
 If (( byteVar & 0b0010 ) == 0b0010 ) {}
