@@ -9,6 +9,7 @@ java bytesorter
 ### Example:
 
 ***Input
+
 ```java
 byte byteVar = 0b0101;
 
@@ -21,7 +22,9 @@ If (( byteVar & 0b0101 ) == 0b0101 ) {} // This one is more accurate
 If (( byteVar & 0b0110 ) == 0b0110 ) {}
 If (( byteVar & 0b1000 ) == 0b1000 ) {}
 ```
+
 <br>
+
 ***Output
 
 ```java
