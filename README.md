@@ -1,11 +1,14 @@
 # Bytesorter
-Sort a byte if selection in highest-lowest value
+Sort a byte if selection in highest-lowest value, tested on both python & java
 <br>
 ```
 javac bytesorter.java
 java bytesorter
 ```
-Then just paste the if selection in there, supports both python & java<br><br>
+
+### Example:
+
+***Input
 ```java
 byte byteVar = 0b0101;
 
@@ -19,7 +22,7 @@ If (( byteVar & 0b0110 ) == 0b0110 ) {}
 If (( byteVar & 0b1000 ) == 0b1000 ) {}
 ```
 <br>
-### Output of bytesorter:
+***Output
 
 ```java
 If (( byteVar & 0b0001 ) == 0b0001 ) {}
