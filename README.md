@@ -7,11 +7,7 @@ java bytesorter
 ```
 
 ### Example:
- 
- 
- **Input
- 
- 
+##### Input
 ```java
 byte byteVar = 0b0101;
 
@@ -27,7 +23,7 @@ If (( byteVar & 0b1000 ) == 0b1000 ) {}
 
 <br>
 
-***Output
+##### Output
 
 ```java
 If (( byteVar & 0b0001 ) == 0b0001 ) {}
