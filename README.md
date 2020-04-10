@@ -8,6 +8,6 @@ java bytesorter
 Then just paste the if selection in there, supports both python & java<br><br>
 <p align="center"> 
   <strong>
-  Something overkill I created partly for fun to use on code for a protocol decode program
+  Something overkill I created partly for fun but also to sort big byte selections
   </strong>
 </p>
