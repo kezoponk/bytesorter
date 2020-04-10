@@ -34,8 +34,10 @@ If (( byteVar & 0b0110 ) == 0b0110 ) {}
 If (( byteVar & 0b0111 ) == 0b0111 ) {}
 If (( byteVar & 0b1000 ) == 0b1000 ) {}
 ```
+
+<br>
 <p align="center"> 
   <strong>
-  Something overkill I created partly for fun but also to sort big byte selections
+  Created partly for fun
   </strong>
 </p>
