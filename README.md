@@ -1,6 +1,6 @@
 # Bytesorter
 Sort a byte if selection in highest-lowest value
-Something overkill I created partly for fun to use on code for a protocol decode program
+> Something overkill I created partly for fun to use on code for a protocol decode program
 <br>
 ```
 javac bytesorter.java
