@@ -7,11 +7,11 @@ java bytesorter
 ```
 
 ### Example:
-
-
-**Input
-
-
+ 
+ 
+ **Input
+ 
+ 
 ```java
 byte byteVar = 0b0101;
 
