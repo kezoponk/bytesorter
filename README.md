@@ -39,6 +39,6 @@ If (( byteVar & 0b1000 ) == 0b1000 ) {}
 <p align="center"> 
   <strong>
   Created partly for fun
-  </strong>
+  </strong> <br>
   <a href="https://java.com"> <img src="http://ForTheBadge.com/images/badges/made-with-java.svg"> </a>
 </p>
