@@ -1,5 +1,4 @@
 # Bytesorter 
-[![forthebadge made-with-java](http://ForTheBadge.com/images/badges/made-with-java.svg)](https://java.com/)
 Sort a byte if selection in highest-lowest value, tested on both python & java
 If you don't know why this is neccessary, you're probably not that familiar with binary
 <br>
@@ -41,4 +40,5 @@ If (( byteVar & 0b1000 ) == 0b1000 ) {}
   <strong>
   Created partly for fun
   </strong>
+  <a href="https://java.com"> <img src="http://ForTheBadge.com/images/badges/made-with-java.svg"> </a>
 </p>
