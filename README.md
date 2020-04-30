@@ -1,4 +1,5 @@
-# Bytesorter
+# Bytesorter 
+[![forthebadge made-with-java](http://ForTheBadge.com/images/badges/made-with-java.svg)](https://java.com/)
 Sort a byte if selection in highest-lowest value, tested on both python & java
 If you don't know why this is neccessary, you're probably not that familiar with binary
 <br>
