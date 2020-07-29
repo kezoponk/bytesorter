@@ -25,7 +25,7 @@ else if (( byteVar & 0b1000 ) == 0b1000 ) {}
 
 ##### Output
 ```java
-If (( byteVar & 0b0001 ) == 0b0001 ) {}
+if (( byteVar & 0b0001 ) == 0b0001 ) {}
 else if (( byteVar & 0b0010 ) == 0b0010 ) {}
 else if (( byteVar & 0b0011 ) == 0b0011 ) {}
 else if (( byteVar & 0b0100 ) == 0b0100 ) {}
