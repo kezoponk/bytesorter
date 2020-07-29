@@ -22,6 +22,7 @@ public class bytesorter {
   static String sortedBytes[] = new String[100];
 
   static int realLength(String[] arr) {
+    // Find real length of array since java array length is static
     int count = 0;
     for (String out : arr) {
       try {
@@ -37,11 +38,11 @@ public class bytesorter {
   static String javaAndPythonSplitter(String line) {
     String type = "";
     String trimmed = "";
-
+    // Ob for bytes, 0x for hex
     if (line.contains("& 0b")) type = "b";      // Byte
     else if (line.contains("& 0x")) type = "x"; // Hex
     String splittedLine[] = line.split("& 0"+type);
-
+    // Find end of value to determine 4bit, 8bit, 16bit etc
     for (String character : splittedLine[1].split("")) {
       if(character.equals(")") || character.equals(" ")) break;
       trimmed += character;
@@ -50,7 +51,9 @@ public class bytesorter {
   }
 
   static void getBytes(String line) {
+    // Find byte value
     Bytes[index] = (byte) (-1*Byte.parseByte(javaAndPythonSplitter(line), 2));
+    // Make the byte value array and input text array same positions
     unsortedStrings[index] = line;
     unsortedBytes[index] = Bytes[index];
     index++;
@@ -58,11 +61,10 @@ public class bytesorter {
 
   static void sortBytes() {
     int index = 0, lineIndex = 0;
+    // Sort array then align with input text
     Arrays.sort(Bytes);
-
     while(index<realLength(unsortedStrings)) {
       lineIndex = 0;
-
       for (int unsortedByte: unsortedBytes) {
         if((byte) Bytes[index] == unsortedByte) {
           sortedBytes[index] = unsortedStrings[lineIndex];
@@ -72,9 +74,11 @@ public class bytesorter {
       }
       index++;
     }
-    for (String line: sortedBytes) {
-      if(line == null) break;
-      output.append(line+"\n");
+    // Reverse sortedbytes to make it smallest-biggest
+    lineIndex = realLength(sortedBytes);
+    while(lineIndex >= 0) {
+      output.append(sortedBytes[lineIndex]+"\n");
+      lineIndex--;
     }
   }
 
@@ -120,10 +124,11 @@ public class bytesorter {
           }
           sortBytes();
         } catch(Exception e) {
-          output.setText("Invalid byte selection");
+          output.setText("Invalid byte selection\n"+e);
         }
       }
     });
+
     int outputBounds[] = {10, 220, 530, 200};
     outputScroll = textarea(outputBounds, output);
     frame.add(outputScroll);
