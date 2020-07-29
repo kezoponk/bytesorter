@@ -13,26 +13,26 @@ java bytesorter
 ```java
 byte byteVar = 0b0101;
 
-If (( byteVar & 0b0001 ) == 0b0001 ) {}
-If (( byteVar & 0b0010 ) == 0b0010 ) {}
-If (( byteVar & 0b0011 ) == 0b0011 ) {}
-If (( byteVar & 0b0100 ) == 0b0100 ) {}
-If (( byteVar & 0b0111 ) == 0b0111 ) {} // This returns true even though
-If (( byteVar & 0b0101 ) == 0b0101 ) {} // This one is more accurate
-If (( byteVar & 0b0110 ) == 0b0110 ) {}
-If (( byteVar & 0b1000 ) == 0b1000 ) {}
+if (( byteVar & 0b0001 ) == 0b0001 ) {}
+else if (( byteVar & 0b0010 ) == 0b0010 ) {}
+else if (( byteVar & 0b0011 ) == 0b0011 ) {}
+else if (( byteVar & 0b0100 ) == 0b0100 ) {}
+else if (( byteVar & 0b0111 ) == 0b0111 ) {} // This returns true even though
+else if (( byteVar & 0b0101 ) == 0b0101 ) {} // This one is more accurate
+else if (( byteVar & 0b0110 ) == 0b0110 ) {}
+else if (( byteVar & 0b1000 ) == 0b1000 ) {}
 ```
 
 ##### Output
 ```java
 If (( byteVar & 0b0001 ) == 0b0001 ) {}
-If (( byteVar & 0b0010 ) == 0b0010 ) {}
-If (( byteVar & 0b0011 ) == 0b0011 ) {}
-If (( byteVar & 0b0100 ) == 0b0100 ) {}
-If (( byteVar & 0b0101 ) == 0b0101 ) {}
-If (( byteVar & 0b0110 ) == 0b0110 ) {}
-If (( byteVar & 0b0111 ) == 0b0111 ) {}
-If (( byteVar & 0b1000 ) == 0b1000 ) {}
+else if (( byteVar & 0b0010 ) == 0b0010 ) {}
+else if (( byteVar & 0b0011 ) == 0b0011 ) {}
+else if (( byteVar & 0b0100 ) == 0b0100 ) {}
+else if (( byteVar & 0b0101 ) == 0b0101 ) {}
+else if (( byteVar & 0b0110 ) == 0b0110 ) {}
+else if (( byteVar & 0b0111 ) == 0b0111 ) {}
+else if (( byteVar & 0b1000 ) == 0b1000 ) {}
 ```
 
 <br>
