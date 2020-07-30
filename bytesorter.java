@@ -12,8 +12,8 @@ import javax.swing.ScrollPaneConstants;
 public class bytesorter {
 
   static JFrame frame;
-  static JScrollPane inputScroll, outputScroll;
   static JTextArea input, output;
+  static JScrollPane inputScroll, outputScroll;
   static int index, lang = 0;
 
   static byte Bytes[] = new byte[200];
@@ -128,7 +128,6 @@ public class bytesorter {
         }
       }
     });
-
     int outputBounds[] = {10, 220, 530, 200};
     outputScroll = textarea(outputBounds, output);
     frame.add(outputScroll);
