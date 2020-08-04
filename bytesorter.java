@@ -75,7 +75,7 @@ public class bytesorter {
       index++;
     }
     // Reverse sortedbytes to make it smallest-biggest
-    lineIndex = realLength(sortedBytes);
+    lineIndex = realLength(sortedBytes)-1;
     while(lineIndex >= 0) {
       output.append(sortedBytes[lineIndex]+"\n");
       lineIndex--;
