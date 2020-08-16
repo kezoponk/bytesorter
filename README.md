@@ -1,6 +1,6 @@
 # Bytesorter 
 Sort a byte if selection in highest-lowest value, tested on both python & java<br>
-If you don't know why this is neccessary, you're probably not that familiar with binary
+If you don't know why this is neccessary, you're probably not familiar with binary
 <br>
 ```
 javac bytesorter.java
