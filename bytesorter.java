@@ -35,7 +35,7 @@ public class bytesorter {
     return count;
   }
 
-  static String javaAndPythonSplitter(String line) {
+  static String javaAndPythonParser(String line) {
     String type = "";
     String trimmed = "";
     // Ob for bytes, 0x for hex
@@ -52,7 +52,7 @@ public class bytesorter {
 
   static void getBytes(String line) {
     // Find byte value
-    Bytes[index] = (byte) (-1*Byte.parseByte(javaAndPythonSplitter(line), 2));
+    Bytes[index] = (byte) (-1*Byte.parseByte(javaAndPythonParser(line), 2));
     // Make the byte value array and input text array same positions
     unsortedStrings[index] = line;
     unsortedBytes[index] = Bytes[index];
