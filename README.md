@@ -7,7 +7,9 @@ javac bytesorter.java
 java bytesorter
 ```
 
-### Example:
+<br>
+
+## Example
 ##### Input
 
 ```java
