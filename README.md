@@ -2,6 +2,7 @@
 Sort a byte if selection in highest-lowest value, tested on both python & java<br>
 If you don't know why this is neccessary, you're probably not familiar with binary
 <br>
+## Usage
 ```
 # Java(TM) SE Runtime Environment (build 13.0.2+8)
 javac bytesorter.java
