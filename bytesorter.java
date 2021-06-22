@@ -10,7 +10,6 @@ import java.awt.Component;
 import javax.swing.ScrollPaneConstants;
 
 public class bytesorter {
-
   static JFrame frame;
   static JTextArea input, output;
   static JScrollPane inputScroll, outputScroll;
@@ -19,29 +18,17 @@ public class bytesorter {
   static byte Bytes[] = new byte[200];
   static byte unsortedBytes[] = new byte[200];
   static String unsortedStrings[] = new String[200];
-  static String sortedBytes[] = new String[100];
-
-  static int realLength(String[] arr) {
-    // Find real length of array since java array length is static
-    int count = 0;
-    for (String out : arr) {
-      try {
-        if (out.isBlank()) return count;
-      } catch (NullPointerException e) {
-        return count;
-      }
-      count++;
-    }
-    return count;
-  }
+  static String sortedBytes[] = new String[200];
 
   static String javaAndPythonParser(String line) {
     String type = "";
     String trimmed = "";
+    
     // Ob for bytes, 0x for hex
     if (line.contains("& 0b")) type = "b";      // Byte
     else if (line.contains("& 0x")) type = "x"; // Hex
     String splittedLine[] = line.split("& 0"+type);
+    
     // Find end of value to determine 4bit, 8bit, 16bit etc
     for (String character : splittedLine[1].split("")) {
       if(character.equals(")") || character.equals(" ")) break;
@@ -53,6 +40,7 @@ public class bytesorter {
   static void getBytes(String line) {
     // Find byte value
     Bytes[index] = (byte) (-1*Byte.parseByte(javaAndPythonParser(line), 2));
+    
     // Make the byte value array and input text array same positions
     unsortedStrings[index] = line;
     unsortedBytes[index] = Bytes[index];
@@ -61,6 +49,7 @@ public class bytesorter {
 
   static void sortBytes() {
     int index = 0, lineIndex = 0;
+    
     // Sort array then align with input text
     Arrays.sort(Bytes);
     while(index<realLength(unsortedStrings)) {
@@ -74,12 +63,27 @@ public class bytesorter {
       }
       index++;
     }
+    
     // Reverse sortedbytes to make it smallest-biggest
     lineIndex = realLength(sortedBytes)-1;
     while(lineIndex >= 0) {
       output.append(sortedBytes[lineIndex]+"\n");
       lineIndex--;
     }
+  }
+
+  static int realLength(String[] arr) {
+    // Calculate real length of array since java array length is static
+    int count = 0;
+    for (String out : arr) {
+      try {
+        if (out.isBlank()) return count;
+      } catch (NullPointerException e) {
+        return count;
+      }
+      count++;
+    }
+    return count;
   }
 
   static JScrollPane textarea(int bounds[], JTextArea textarea) {
@@ -113,7 +117,7 @@ public class bytesorter {
     input.addKeyListener(new KeyAdapter() {
       public void keyReleased(KeyEvent x) {
         output.setText("");
-        sortedBytes = new String[100];
+        sortedBytes = new String[200];
         Bytes = new byte[200];
         index = 0;
 
@@ -123,15 +127,17 @@ public class bytesorter {
             getBytes(line);
           }
           sortBytes();
+          
         } catch(Exception e) {
-          output.setText("Invalid byte selection\n"+e);
+          output.setText("Too long or invalid byte selection\n"+e);
         }
       }
     });
+    
     int outputBounds[] = {10, 220, 530, 200};
     outputScroll = textarea(outputBounds, output);
     frame.add(outputScroll);
-
+    
     frame.setVisible(true);
   }
 }
